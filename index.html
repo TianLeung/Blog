@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 - TianLeung</title>
+    <meta name="description" content="TianLeung的AI工具分享平台，提供AI写作、图像、视频、办公等多类工具">
+    <meta name="keywords" content="AI工具,AI写作,AI图像,AI视频,AI办公,TianLeung">
+    <meta name="author" content="TianLeung">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="关于我 - TianLeung">
+    <meta property="og:description" content="TianLeung的AI工具分享平台">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #00fff6;
+      overflow-x: hidden;
+    }
+/* 搜索和筛选功能样式 */
+.search-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border: 2px solid #00e6e6;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00fff6;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.5);
+}
+
+.search-input::placeholder {
+    color: rgba(0, 230, 230, 0.5);
+}
+
+/* 筛选按钮样式 */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    border: 1px solid #00e6e6;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00fff6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: #00e6e6;
+    color: #000;
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    .filter-buttons {
+        gap: 5px;
+    }
+    
+    .filter-button {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}
+
+    /* 视频背景容器 */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-shadow: 0 0 15px #00e6e6, 0 0 30px #00b3b3;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 15px #00e6e6, 0 0 30px #00b3b3;
+      }
+      to {
+        text-shadow: 0 0 25px #00fff6, 0 0 40px #00e6e6;
+      }
+    }
+
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1200px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00e6e6;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #00fff6;
+    }
+.about {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #00fff6;
+}
+
+/* 添加以下新样式 */
+.about ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%; /* 控制列表宽度 */
+    max-width: 600px; /* 最大宽度 */
+}
+
+.about ul li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.about p {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact img {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      border: 3px solid #00fff6;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00fff6;
+    }
+
+    .contact .label {
+      font-size: 1em;
+      margin-top: 5px;
+      color: #ffffff;
+    }
+
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+/* 在原有 style 标签内的 footer 样式之前添加以下代码 */
+
+/* AI工具卡片网格布局 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(199px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.tool-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00e6e6;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 113px;
+    width: 199px;
+    position: relative;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.tool-card a {
+    text-decoration: none;
+}
+
+.tool-card img {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 
+        0 0 0 2px rgba(0, 0, 0, 0.8),
+        0 0 0 3px #ff0000;
+    animation: rainbow 4s linear infinite;
+    loading: lazy;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 添加图片加载失败时的样式 */
+.tool-card img:not([src]), 
+.tool-card img[src=""], 
+.tool-card img[src*="error"], 
+.tool-card img[src$="default.png"] {
+    background: #000;
+    position: relative;
+}
+
+.tool-card img:not([src])::after, 
+.tool-card img[src=""]::after, 
+.tool-card img[src*="error"]::after, 
+.tool-card img[src$="default.png"]::after {
+    content: "加载失败";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00fff6;
+    font-size: 12px;
+}
+
+@keyframes rainbow {
+    0% { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8), 0 0 0 3px #ff0000; }
+    20% { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8), 0 0 0 3px #ff7f00; }
+    40% { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8), 0 0 0 3px #ffff00; }
+    60% { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8), 0 0 0 3px #00ff00; }
+    80% { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8), 0 0 0 3px #0000ff; }
+    100% { box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8), 0 0 0 3px #ff0000; }
+}
+.tool-card img {
+    /* ... 原有样式保持不变 ... */
+    will-change: box-shadow;
+    transform: translateZ(0);
+}
+
+.tool-card h3 {
+    color: #00fff6;
+    margin: 5px 0;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tool-card p {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+}
+
+.tool-card:hover {
+    transform: scale(1.05) translateZ(0);
+    box-shadow: 0 0 20px #00fff6;
+}
+
+/* 添加触摸设备的优化 */
+@media (hover: hover) {
+    .tool-card:hover {
+        transform: scale(1.05) translateZ(0);
+        box-shadow: 0 0 20px #00fff6;
+    }
+}
+
+.tool-card:hover p {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    color: #00fff6;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #00e6e6;
+    box-shadow: 0 0 15px #00e6e6;
+    width: 180px;
+    height: auto;
+    -webkit-line-clamp: unset;
+    white-space: normal;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 响应式布局 */
+/* 大屏幕设备 (1200px 及以上) */
+@media screen and (max-width: 1400px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        padding: 0 20px;
+    }
+}
+
+/* 中等屏幕设备 (768px 到 1199px) */
+@media screen and (max-width: 1199px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+    }
+
+    .tool-card {
+        width: 160px;
+        height: 100px;
+    }
+
+    .tool-card h3 {
+        font-size: 0.9em;
+    }
+
+    .contact-section {
+        height: auto;
+        min-height: 100px;
+        padding: 10px 0;
+    }
+}
+
+/* 平板设备 (576px 到 767px) */
+@media screen and (max-width: 767px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+    }
+
+    .tool-card {
+        width: 140px;
+        height: 95px;
+        padding: 8px;
+    }
+
+    .tool-card img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-grid {
+        gap: 15px;
+    }
+
+    .contact img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* 手机设备 (575px 及以下) */
+@media screen and (max-width: 575px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 8px;
+    }
+
+    .tool-card {
+        width: 130px;
+        height: 90px;
+        padding: 6px;
+    }
+
+    .tool-card img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .tool-card h3 {
+        font-size: 0.8em;
+        margin: 4px 0;
+    }
+
+    .tool-card p {
+        font-size: 0.7em;
+        -webkit-line-clamp: 2;
+    }
+
+    .contact-section {
+        padding: 8px 0;
+    }
+
+    .contact-grid {
+        gap: 10px;
+    }
+
+    .contact img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact .label {
+        font-size: 0.7em;
+    }
+}
+
+/* 超小屏幕设备优化 */
+@media screen and (max-width: 360px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 6px;
+    }
+
+    .tool-card {
+        width: 120px;
+        height: 85px;
+    }
+}
+.contact-section {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;  /* 改为自适应高度 */
+    max-height: 130px;  /* 添加最大高度限制 */
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    border-top: 1px solid #00e6e6;
+    box-shadow: 0 -2px 10px rgba(0, 230, 230, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;  /* 添加内边距 */
+    overflow: hidden;  /* 防止内容溢出 */
+}
+
+.contact-section h2 {
+    margin: 5px 0;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+}
+
+.contact {
+    padding: 5px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact p {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.contact img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    loading: lazy;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 添加联系方式图片加载失败时的样式 */
+.contact img:not([src]), 
+.contact img[src=""], 
+.contact img[src*="error"] {
+    background: #000;
+    position: relative;
+}
+
+.contact img:not([src])::after, 
+.contact img[src=""]::after, 
+.contact img[src*="error"]::after {
+    content: "二维码加载失败";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00fff6;
+    font-size: 12px;
+}
+
+.contact .label {
+    font-size: 0.8em;
+    margin-top: 2px;
+}
+
+body {
+    padding-bottom: 140px;
+}
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #00e6e6;
+    }
+
+/* 响应式布局适配 */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        max-height: 120px;
+    }
+    
+    .contact img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-grid {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-section {
+        max-height: 110px;
+    }
+    
+    .contact img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .contact-grid {
+        gap: 8px;
+    }
+    
+    .contact .label {
+        font-size: 0.6em;
+    }
+}
+
+/* 加载状态和错误处理样式 */
+.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.loading::after {
+    content: "加载中...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00fff6;
+    animation: loadingText 1.5s infinite;
+}
+
+@keyframes loadingText {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+.error-message {
+    text-align: center;
+    color: #ff4444;
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid #ff4444;
+}
+
+.tool-card.error {
+    border-color: #ff4444;
+    animation: errorShake 0.5s;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* 统一处理所有工具卡片的图片错误状态 */
+.tool-card img:not([src]), 
+.tool-card img[src=""], 
+.tool-card img[src*="error"] {
+    display: none;
+}
+
+.tool-card img:not([src]) + h3::before, 
+.tool-card img[src=""] + h3::before, 
+.tool-card img[src*="error"] + h3::before {
+    content: "⚠️";
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ff4444;
+}
+/* 联系方式区域的错误处理样式 */
+.contact img:not([src]), 
+.contact img[src=""], 
+.contact img[src*="error"] {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ff4444;
+}
+
+.contact img:not([src])::after, 
+.contact img[src=""]::after, 
+.contact img[src*="error"]::after {
+    content: "二维码加载失败";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4444;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-section .error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+  </style>
+</head>
+<body>
+  <!-- 视频背景 -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="images/background.mp4" type="video/mp4">
+      您的浏览器不支持 HTML5 视频标签。
+    </video>
+  </div>
+
+  <header>
+    <h1>TianLeung 的分享</h1>
+  </header>
+<div class="search-container">
+    <input type="text" class="search-input" placeholder="搜索AI工具...">
+    <div class="filter-buttons">
+        <button class="filter-button active" data-category="all">全部</button>
+        <button class="filter-button" data-category="writing">写作</button>
+        <button class="filter-button" data-category="image">图像</button>
+        <button class="filter-button" data-category="video">视频</button>
+        <button class="filter-button" data-category="audio">音频</button>
+        <button class="filter-button" data-category="code">编程</button>
+        <button class="filter-button" data-category="office">办公</button>
+        <button class="filter-button" data-category="design">设计</button>
+        <button class="filter-button" data-category="chat">对话</button>
+    </div>
+</div>
+
+  <section>
+    <h2>关于我</h2>
+    <div class="about">
+      <img src="images/profile.jpg" alt="TianLeung 的头像">
+      <p>
+              欢迎你的到来！我是 添亮 ，2020年初从事抖音直播带货行业，23年开始专注于 AI 技术、AI 软件应用、电脑软件应用、短视频直播运营的知识分享者。 
+        信息差不是用来割韭菜而是用来分享的，我致力于帮助更多人了解和掌握最新的AI科技趋势，同时为个人成长和商业发展提供有价值的支持。
+        <br><br>
+        专心致力于
+        <ul>
+          <li>人工智能技术及应用</li>
+          <li>AI 应用软件研究与使用</li>
+          <li>优质电脑办公软件的分享</li>
+          <li>直播和短视频内容创作的运营</li>
+        </ul>
+        如果你对这些领域感兴趣，请随时通过下方的方式联系我！
+      </p>
+    </div>
+  </section>
+
+    <section data-category="writing">
+    <h2>AI写作工具</h2>
+    <div class="tools-grid">
+            <div class="tool-card">
+                <a href="https://ibiling.cn/?from=ai-bot" target="_blank">
+                    <img src="images/笔灵AI写作.png" alt="笔灵AI写作">
+                    <h3>笔灵AI写作</h3>
+                    <p>面向专业写作领域的AI写作工具</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://www.editage.cn/paperpal?utm_source=ai-bot&utm_medium=Banner&utm_campaign=Banner" target="_blank">
+                    <img src="images/Paperpal.png" alt="Paperpal">
+                    <h3>Paperpal</h3>
+                    <p>英文论文写作助手</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://miaobi.xinhuaskl.com/?channel=shuzhi" target="_blank">
+                    <img src="images/新华妙笔.png" alt="新华妙笔">
+                    <h3>新华妙笔</h3>
+                    <p>AI公文写作平台</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://ibiling.cn/novel-workbench?from=aibotnovel" target="_blank">
+                    <img src="images/笔灵AI小说.png" alt="笔灵AI小说">
+                    <h3>笔灵AI小说</h3>
+                    <p>笔灵推出的AI小说生成和创作工具</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://gw.iflydocs.com/?from=aibot" target="_blank">
+                    <img src="images/讯飞公文写作助手.png" alt="讯飞公文写作助手">
+                    <h3>讯飞公文写作助手</h3>
+                    <p>讯飞公文写作助手</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://www.aipaperpass.com/?pic=g5DP" target="_blank">
+                    <img src="images/千笔AI论文.png" alt="千笔AI论文">
+                    <h3>千笔AI论文</h3>
+                    <p>全网首家论文无限改稿平台</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://www.66paper.cn/?pmt=2E1C09" target="_blank">
+                    <img src="images/66AI论文.png" alt="66AI论文">
+                    <h3>66AI论文</h3>
+                    <p>高质量、低查重、低AIGC率的AI论文写作工具</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://xiezuocat.com/?s=aigj" target="_blank">
+                    <img src="images/秘塔写作猫.png" alt="秘塔写作猫">
+                    <h3>秘塔写作猫</h3>
+                    <p>AI写作，文章自成</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://www.xiaomengai.com/dashboard/novels" target="_blank">
+                    <img src="images/彩云小梦.png" alt="彩云小梦">
+                    <h3>彩云小梦</h3>
+                    <p>彩云科技推出的智能AI故事写作工具</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://www.guangsuxie.com/static/college-write-web/home?from=AItools" target="_blank">
+                    <img src="images/光速写作.png" alt="光速写作">
+                    <h3>光速写作</h3>
+                    <p>AI写作、PPT生成工具，单篇最长15000字</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://huixie.iflyrec.com/list?utm_source=ai-bot.cn" target="_blank">
+                    <img src="images/讯飞写作.png" alt="讯飞写作">
+                    <h3>讯飞写作</h3>
+                    <p>科大讯飞推出的AI智能写作助手</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://cp.baidu.com/?utm_source=ai-bot.cn" target="_blank">
+                    <img src="images/橙篇.png" alt="橙篇">
+                    <h3>橙篇</h3>
+                    <p>百度推出的AI长文理解和内容创作工具</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://quillbot.com/" target="_blank">
+                    <img src="images/QuillBot.png" alt="QuillBot">
+                    <h3>QuillBot</h3>
+                    <p>加强写作并提高工作效率，而不会牺牲真实性。</p>
+                </a>
+            </div>
+
+            <div class="tool-card">
+                <a href="https://www.grammarly.com/" target="_blank">
+                    <img src="images/Grammarly.png" alt="Grammarly">
+                    <h3>Grammarly</h3>
+                    <p>负责任的 AI，确保您的写作和声誉大放异彩</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<section data-category="image">
+    <h2>AI图像工具</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://www.midjourney.com/" target="_blank">
+                <img src="images/Midjourney.png" alt="Midjourney">
+                <h3>Midjourney</h3>
+                <p>AI图像和插画生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://stablediffusionweb.com/" target="_blank">
+                <img src="images/Stable Diffusion.png" alt="Stable Diffusion">
+                <h3>Stable Diffusion</h3>
+                <p>StabilityAl推出的文本到图像生成AI</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://openai.com/index/dall-e-3/" target="_blank">
+                <img src="images/DALL·E3.png" alt="DALL·E3">
+                <h3>DALL·E3</h3>
+                <p>OpenAI的最新力作，E3能够理解更多的细微差别和细节，让您轻松地将您的想法转化为非常准确的图像。</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://yige.baidu.com/" target="_blank">
+                <img src="images/文心一格.png" alt="文心一格">
+                <h3>文心一格</h3>
+                <p>由百度公司推出的AI艺术和创意辅助平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.canva.cn/" target="_blank">
+                <img src="images/Canva Al图像生成.png" alt="Canva Al图像生成">
+                <h3>Canva Al图像生成</h3>
+                <p>在线设计工具Canva推出的AI图像生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://picwish.cn/" target="_blank">
+                <img src="images/PicWish / 佐糖.png" alt="PicWish/佐糖">
+                <h3>PicWish/佐糖</h3>
+                <p>一站式AI图像创作神器，提供丰富的AI工具，化繁为简，让创作更高效，支持全平台使用。</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.artbreeder.com/" target="_blank">
+                <img src="images/Artbreeder.png" alt="Artbreeder">
+                <h3>Artbreeder</h3>
+                <p>使用由 AI 提供支持的多种工具创建角色、艺术品等</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://deepart.io/" target="_blank">
+                <img src="images/DeepArt.io.png" alt="DeepArt.io">
+                <h3>DeepArt.io</h3>
+                <p>可将任何图像转化为艺术风格作品</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://jimeng.jianying.com/ai-tool/home/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/即梦Dreamina.png" alt="即梦Dreamina">
+                <h3>即梦Dreamina</h3>
+                <p>抖音旗下免费AI绘画和视频生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.gaoding.com/" target="_blank">
+                <img src="images/稿定AI.png" alt="稿定AI">
+                <h3>稿定AI</h3>
+                <p>一站式AI设计工具集，免费AI绘图、图片转A绘画、AI抠图消除</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://tongyi.aliyun.com/wanxiang/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/通义万相.png" alt="通义万相">
+                <h3>通义万相</h3>
+                <p>阿里最新推出的AI绘画创作模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.whee.com/" target="_blank">
+                <img src="images/WHEE.png" alt="WHEE">
+                <h3>WHEE</h3>
+                <p>美图推出的AI图片和绘画创作生成平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://artistrylab.net/login" target="_blank">
+                <img src="images/炉米Lumi.png" alt="炉米Lumi">
+                <h3>炉米Lumi</h3>
+                <p>字节跳动推出的AIGC图像创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://miaohua.sensetime.com/inspiration?invite_code=9yvxNm7BR" target="_blank">
+                <img src="images/秒画.png" alt="秒画">
+                <h3>秒画</h3>
+                <p>商汤科技推出的免费AI作画和图片生成平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://tusiart.com/" target="_blank">
+                <img src="images/吐司AI.png" alt="吐司AI">
+                <h3>吐司AI</h3>
+                <p>AI绘画模型社区和在线生图平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.liblib.art/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/LiblibA.·哩布哩布AI.png" alt="LiblibA.·哩布哩布AI">
+                <h3>LiblibA.·哩布哩布AI</h3>
+                <p>国内领先的AI图像创作平台和模型分享社区</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://klingai.kuaishou.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/可灵AI.png" alt="可灵AI">
+                <h3>可灵AI</h3>
+                <p>快手推出的AI图像和视频创作平台</p>
+            </a>
+        </div>
+        <div class="tool-card">
+            <a href="https://photo.baidu.com/photasy/home?utm_source=ai-bot.cn&_at_=1734938242955" target="_blank">
+                <img src="images/超能画布.png" alt="超能画布">
+                <h3>超能画布</h3>
+                <p>百度网盘推出的AI创意图像写真创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.krea.ai/home" target="_blank">
+                <img src="images/Krea Al.png" alt="Krea Al">
+                <h3>Krea Al</h3>
+                <p>实时AI图像、视频生成和编辑平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://app.photoroom.com/" target="_blank">
+                <img src="images/Photoroom.png" alt="Photoroom">
+                <h3>Photoroom</h3>
+                <p>在线AI图片编辑工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://agi.taobao.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/万相营造.png" alt="万相营造">
+                <h3>万相营造</h3>
+                <p>阿里妈妈推出的A电商营销工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.remove.bg/zh?aid=kkgjrdhppgtrhbyn&utm_campaign=affiliate+marketing&utm_medium=referral&utm_source=affiliate" target="_blank">
+                <img src="images/remove.bg.png" alt="remove.bg">
+                <h3>remove.bg</h3>
+                <p>强大的AI图片背景移除工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://pic.360.com/home?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/360智图.png" alt="360智图">
+                <h3>360智图</h3>
+                <p>360推出的AI作图平台，支持智能抠图、智能消除、智能放大、智能配</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://magicstudio.com/zh/" target="_blank">
+                <img src="images/MagicStudio.png" alt="MagicStudio">
+                <h3>MagicStudio</h3>
+                <p>高颜值AI图像处理工具</p>
+            </a>
+        </div>
+        <div class="tool-card">
+            <a href="https://faceswapper.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Faceswapper.png" alt="Faceswapper">
+                <h3>Faceswapper</h3>
+                <p>AI在线换脸工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://arc.tencent.com/zh/ai-demos/faceRestoration" target="_blank">
+                <img src="images/ARC.png" alt="ARC">
+                <h3>ARC</h3>
+                <p>腾讯旗下ARC实验室推出的免费AI图片处理工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.cutout.pro/zh-CN" target="_blank">
+                <img src="images/Cutout.Pro.png" alt="Cutout.Pro">
+                <h3>Cutout.Pro</h3>
+                <p>AI在线处理图片</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://clipdrop.co/" target="_blank">
+                <img src="images/ClipDrop.png" alt="ClipDrop">
+                <h3>ClipDrop</h3>
+                <p>Stability.ai推出的AI图片处理系列工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://vmake.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Vmake Al.png" alt="Vmake Al">
+                <h3>Vmake Al</h3>
+                <p>AI在线图像和视频编辑平台，专为电商、设计提供服务</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://app.leonardo.ai/auth/login?callbackUrl=%2F%3Fvia%3Dai-bot" target="_blank">
+                <img src="images/Leonardo.ai.png" alt="Leonardo.ai">
+                <h3>Leonardo.ai</h3>
+                <p>免费的AI绘画和图像生成工具和社区</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-category="video">
+    <h2>AI视频工具</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://chatglm.cn/main/alltoolsdetail?image=https://sfile.chatglm.cn/activeimg/bdms/66b97e348217030036f486f1&open_from=ads_web_aitool&fr=ads_web_aitool&lang=zh" target="_blank">
+                <img src="images/智谱清影.png" alt="智谱清影">
+                <h3>智谱清影</h3>
+                <p>智谱AI最新推出的AI视频生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.youyan3d.com/?utm_source=zhanwaidaoliu&utm_campaign=zwj&utm_content=aigongjuji&from=aigongjuji" target="_blank">
+                <img src="images/有言.png" alt="有言">
+                <h3>有言</h3>
+                <p>一站式AI视频创作，1200+免费3D数字人</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://typemovie.art/#/dashboard" target="_blank">
+                <img src="images/星火绘镜.png" alt="星火绘镜">
+                <h3>星火绘镜</h3>
+                <p>科大讯飞推出的AI短视频创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.ihuiwa.com/workspace/ai-video/from-image?huiwaInviteCode=EMRCAL" target="_blank">
+                <img src="images/绘蛙AI视频.png" alt="绘蛙AI视频">
+                <h3>绘蛙AI视频</h3>
+                <p>AI图生视频工具，一键将模特图变成动态视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.heygen.com/?sid=rewardful&via=ai-bot" target="_blank">
+                <img src="images/HeyGen.png" alt="HeyGen">
+                <h3>HeyGen</h3>
+                <p>AIGC 视频创建平台，生成吸引人的商业视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://aic.oceanengine.com/login" target="_blank">
+                <img src="images/即创.png" alt="即创">
+                <h3>即创</h3>
+                <p>抖音推出的一站式智能创作平台，支持视频、图文和直播创作</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://aibrm.com/?code=fx_cya" target="_blank">
+                <img src="images/白日梦.png" alt="白日梦">
+                <h3>白日梦</h3>
+                <p>AI视频创作平台，最长可生成六分钟的视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://aibot.jurilu.com/#/home" target="_blank">
+                <img src="images/巨日禄.png" alt="巨日禄">
+                <h3>巨日禄</h3>
+                <p>一站式AI动漫视频创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://aigc.yizhentv.com/?_f=ai-botnew" target="_blank">
+                <img src="images/秒创.png" alt="秒创">
+                <h3>秒创</h3>
+                <p>免费AI视频创作工具，支持图文生视频、PPT生视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://kling.kuaishou.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/可灵AI.png" alt="可灵AI">
+                <h3>可灵AI</h3>
+                <p>快手推出的视频生成大模型，可生成2分钟的视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://jimeng.jianying.com/ai-tool/home/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/即梦AI.png" alt="即梦AI">
+                <h3>即梦AI</h3>
+                <p>抖音旗下免费AI绘画和视频生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://video.hunyuan.tencent.com/" target="_blank">
+                <img src="images/混元文生视频.png" alt="混元文生视频">
+                <h3>混元文生视频</h3>
+                <p>腾讯推出的AI文生视频工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://openai.com/sora/?ref=ai-bot.cn" target="_blank">
+                <img src="images/Sora.png" alt="Sora">
+                <h3>Sora</h3>
+                <p>OpenAl推出的AI文本到视频生成模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://runwayml.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Runway.png" alt="Runway">
+                <h3>Runway</h3>
+                <p>强大的AI视频制作工具，绿幕抠像、视频合成等</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://pika.art/" target="_blank">
+                <img src="images/Pika.png" alt="Pika">
+                <h3>Pika</h3>
+                <p>Pika Labs推出的AI视频生成和编辑工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.vidu.studio/zh?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Vidu.png" alt="Vidu">
+                <h3>Vidu</h3>
+                <p>生数科技与清华大学联合发布的AI视频大模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://lumalabs.ai/dream-machine?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Dream Machine.png" alt="Dream Machine">
+                <h3>Dream Machine</h3>
+                <p>Luma推出的AI视频生成工具，120秒内可生成120帧视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://tongyi.aliyun.com/wanxiang/wanxvideo?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/通义万相AI视频.png" alt="通义万相AI视频">
+                <h3>通义万相AI视频</h3>
+                <p>阿里推出的免费A视频生成工具，支持文生视频和图生视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.hedra.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Hedra.png" alt="Hedra">
+                <h3>Hedra</h3>
+                <p>AI对口型视频生成工具，单次可免费生成30秒的视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.vozo.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Vozo.png" alt="Vozo">
+                <h3>Vozo</h3>
+                <p>集一键重写脚本、配音、对口型、翻译于一体的AI视频编辑工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://viggle.ai/home" target="_blank">
+                <img src="images/Viggle.png" alt="Viggle">
+                <h3>Viggle</h3>
+                <p>AI生成角色动态视频的工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.tavus.io/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Tavus.png" alt="Tavus">
+                <h3>Tavus</h3>
+                <p>AI视频生成平台，支持数字人克隆和实时A视频对话</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://yuewen.cn/videos?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/跃问视频.png" alt="跃问视频">
+                <h3>跃问视频</h3>
+                <p>阶跃星辰推出的AI视频生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.skyreels.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/SkyReels.png" alt="SkyReels">
+                <h3>SkyReels</h3>
+                <p>昆仑万维推出的全球首个AI短剧创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.moki.cn/home" target="_blank">
+                <img src="images/MOKI.png" alt="MOKI">
+                <h3>MOKI</h3>
+                <p>美图推出的AI视频短片创作工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://shenbi.maoyan.com/" target="_blank">
+                <img src="images/神笔马良.png" alt="神笔马良">
+                <h3>神笔马良</h3>
+                <p>首个面向长剧本解析的动态故事板A生成工具，让剧本一键成片</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://video.luchentech.com/zh-CN?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Video Ocean.png" alt="Video Ocean">
+                <h3>Video Ocean</h3>
+                <p>潞晨科技推出的多功能AI视频生成平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://flowgpt.com/flow-studio?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Flow Studio.png" alt="Flow Studio">
+                <h3>Flow Studio</h3>
+                <p>AI视频生成工具，一键生成电影级质量的3分钟长视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://vizard.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Vizard.png" alt="Vizard">
+                <h3>Vizard</h3>
+                <p>将长视频转换为社交短视频片段的AI视频工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://xunguang.damo-vision.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/寻光.png" alt="寻光">
+                <h3>寻光</h3>
+                <p>阿里达摩院推出的全流程AI视频创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://hotshot.co/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Hotshot.png" alt="Hotshot">
+                <h3>Hotshot</h3>
+                <p>AI视频生成工具，将文本转为3秒逼真视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://vivago.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Viva.png" alt="Viva">
+                <h3>Viva</h3>
+                <p>免费的AI视频生成和图像创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://adsdog.net/?sourceSite=ai-bot&sourceName=referral" target="_blank">
+                <img src="images/AdsDog.png" alt="AdsDog">
+                <h3>AdsDog</h3>
+                <p>AI营销工具，一键生成多语言数字人口播视频</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.d-id.com/" target="_blank">
+                <img src="images/D-ID.png" alt="D-ID">
+                <h3>D-ID</h3>
+                <p>AI真人口播视频生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.stablevideo.com/login?returnUrl=%2F%3Futm_source%3Dai-bot.cn" target="_blank">
+                <img src="images/Stable Video.png" alt="Stable Video">
+                <h3>Stable Video</h3>
+                <p>Stability Al上线的AI视频生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://onestory.art/dashboard" target="_blank">
+                <img src="images/OneStory.png" alt="OneStory">
+                <h3>OneStory</h3>
+                <p>AI故事生成助手，创作故事和视频变得像说话一样简单</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://noisee.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Noisee Al.png" alt="Noisee Al">
+                <h3>Noisee Al</h3>
+                <p>月之暗面旗下推出的AI音乐视频MV生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://zenvideo.qq.com/" target="_blank">
+                <img src="images/腾讯智影.png" alt="腾讯智影">
+                <h3>腾讯智影</h3>
+                <p>腾讯推出的在线智能视频创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://accounts.wondershare.cn/web/login_cn" target="_blank">
+                <img src="images/万兴播爆.png" alt="万兴播爆">
+                <h3>万兴播爆</h3>
+                <p>AI数字人口播视频营销工具(可商用)，海量素材一键套用</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.sensetime.com/cn/product-detail?categoryId=51134571&gioNav=1" target="_blank">
+                <img src="images/Vimi.png" alt="Vimi">
+                <h3>Vimi</h3>
+                <p>商汤科技推出的可控人物视频生成AI模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://etna.7volcanoes.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Etna.png" alt="Etna">
+                <h3>Etna</h3>
+                <p>七火山科技推出的AI文生视频工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.artink.art/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/艺映AI.png" alt="艺映AI">
+                <h3>艺映AI</h3>
+                <p>AI视频创作工具，支持文生视频、图生视频及视频转漫画功能</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-category="office">
+    <h2>AI办公工具</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://www.aippt.cn/" target="_blank">
+                <img src="images/AiPPT.png" alt="AiPPT">
+                <h3>AiPPT</h3>
+                <p>AI快速生成高质量PPT</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://docmee.cn/?source=ai-bot" target="_blank">
+                <img src="images/文多多AiPPT.png" alt="文多多AiPPT">
+                <h3>文多多AiPPT</h3>
+                <p>AI一键生成PPT，支持AI配图和智能资料整合</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.designkit.com/ppt/?channel=ai-bot.cn" target="_blank">
+                <img src="images/美图AIPPT.png" alt="美图AIPPT">
+                <h3>美图AIPPT</h3>
+                <p>美图秀秀推出的免费在线AI生成PPT设计工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://gamma.app/zh-cn" target="_blank">
+                <img src="images/Gamma App.png" alt="Gamma App">
+                <h3>Gamma App</h3>
+                <p>AI幻灯片演示生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://ibiling.cn/ppt-zone?from=aibotaippt" target="_blank">
+                <img src="images/笔灵AIPPT.png" alt="笔灵AIPPT">
+                <h3>笔灵AIPPT</h3>
+                <p>一键生成PPT和千字演讲稿</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://zhiwen.xfyun.cn/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/讯飞智文.png" alt="讯飞智文">
+                <h3>讯飞智文</h3>
+                <p>科大讯飞推出的免费AIPPT生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://wenku.baidu.com/" target="_blank">
+                <img src="images/百度文库AI助手.png" alt="百度文库AI助手">
+                <h3>百度文库AI助手</h3>
+                <p>基于文心一言的一站式智能文档助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.gaippt.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/GAIPPT.png" alt="GAIPPT">
+                <h3>GAIPPT</h3>
+                <p>AI智能美化PPT工具，上传PPT一键美化</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.mindshow.vip/" target="_blank">
+                <img src="images/麦当秀Mindshow.png" alt="麦当秀Mindshow">
+                <h3>麦当秀Mindshow</h3>
+                <p>AI在线PPT制作工具，支持Markdown等多种格式</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.chat-ppt.com/" target="_blank">
+                <img src="images/ChatPPT.png" alt="ChatPPT">
+                <h3>ChatPPT</h3>
+                <p>AI一键对话生成PPT，智能排版美化</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://qzoffice.com/?from=aibot" target="_blank">
+                <img src="images/轻竹办公.png" alt="轻竹办公">
+                <h3>轻竹办公</h3>
+                <p>在线智能生成和设计PPT的AI工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.presentations.ai/" target="_blank">
+                <img src="images/Presentations.Al.png" alt="Presentations.Al">
+                <h3>Presentations.Al</h3>
+                <p>演示文档版的ChatGPT</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.lgppt.cn/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/AI灵感PPT.png" alt="AI灵感PPT">
+                <h3>AI灵感PPT</h3>
+                <p>免费高效的AIPPT生成工具</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-category="design">
+    <h2>AI设计工具</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://www.ihuiwa.com/invite?huiwaInviteCode=EMRCAL" target="_blank">
+                <img src="images/绘蛙.png" alt="绘蛙">
+                <h3>绘蛙</h3>
+                <p>阿里推出的AI电商营销工具，免费生成图片/文案</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.meijian.com/x/e-commerce/backgrounds?utm_source=dsdhaibot" target="_blank">
+                <img src="images/美间AI.png" alt="美间AI">
+                <h3>美间AI</h3>
+                <p>免费AI设计工具助手，智能海报、提案和商品图生成</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.gaoding.com/create-design?hmsr=ai-bot-ai-bot-tools--aidesign-aidesign-bdqd&utm_source=ai-bot" target="_blank">
+                <img src="images/稿定AI.png" alt="稿定AI">
+                <h3>稿定AI</h3>
+                <p>一站式AI创作和设计平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.piccopilot.com/create/?utm_source=aff&utm_medium=aibot1" target="_blank">
+                <img src="images/Pic Copilot.png" alt="Pic Copilot">
+                <h3>Pic Copilot</h3>
+                <p>阿里国际推出的AI电商营销工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://aiart.chuangkit.com/matrix?utm_source=aibotQD" target="_blank">
+                <img src="images/创客贴AI.png" alt="创客贴AI">
+                <h3>创客贴AI</h3>
+                <p>AI辅助的智能在线设计工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.designkit.com/tools?channel=10026" target="_blank">
+                <img src="images/美图设计室.png" alt="美图设计室">
+                <h3>美图设计室</h3>
+                <p>AI图像创作和设计平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://idesign.alipay.com/home" target="_blank">
+                <img src="images/蚂上有创意.png" alt="蚂上有创意">
+                <h3>蚂上有创意</h3>
+                <p>支付宝推出的AI设计工具，面向商家提供电商设计服务</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.canva.cn/magic/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/魔力工作室.png" alt="魔力工作室">
+                <h3>魔力工作室</h3>
+                <p>Canva可画推出的一站式AI创作套件</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://designer.microsoft.com/" target="_blank">
+                <img src="Microsoft Designe.pngr" alt="Microsoft Designer">
+                <h3>Microsoft Designer</h3>
+                <p>微软推出的在线设计海报和宣传图工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.recraft.ai/projects?ref=ai-bot.cn" target="_blank">
+                <img src="images/Recraft Al.png" alt="Recraft Al">
+                <h3>Recraft Al</h3>
+                <p>免费无限AI画板，生成高质量矢量艺术画、图标、3D图片和插画</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://looka.com/" target="_blank">
+                <img src="images/Looka.png" alt="Looka">
+                <h3>Looka</h3>
+                <p>AI在线设计和生成logo</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://luban.aliyun.com/?ref=ai-bot.cn" target="_blank">
+                <img src="images/鹿班.png" alt="鹿班">
+                <h3>鹿班</h3>
+                <p>阿里推出的智能设计商品图和海报的平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://taishan.qq.com/brand/?ref=ai-bot.cn" target="_blank">
+                <img src="images/智绘设计.png" alt="智绘设计">
+                <h3>智绘设计</h3>
+                <p>腾讯推出的智能设计平台，让内容更精彩</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.135editor.com/ai_editor/?track_id=34&hmmd=ai-bot.cn" target="_blank">
+                <img src="images/135 AI排版.png" alt="135 AI排版">
+                <h3>135 AI排版</h3>
+                <p>公众号AI图文排版和智能文案生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.logoai.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Logoai.png" alt="Logoai">
+                <h3>Logoai</h3>
+                <p>AILOGO创建设计平台，一站式品牌打造</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://voxcraft.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/VoxCraft.png" alt="VoxCraft">
+                <h3>VoxCraft</h3>
+                <p>AI生成3D模型的工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://pictographic.io/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Pictographic.png" alt="Pictographic">
+                <h3>Pictographic</h3>
+                <p>AI插图资源库和生成平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://wegic.ai/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Wegic.png" alt="Wegic">
+                <h3>Wegic</h3>
+                <p>AI网页设计和建站开发工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://collov.cn/?ref=ai-bot.cn" target="_blank">
+                <img src="images/Collov AI.png" alt="Collov AI">
+                <h3>Collov AI</h3>
+                <p>AI室内家居设计生成平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://creatie.ai/?ref=ai-bot.cn" target="_blank">
+                <img src="images/Creatie.png" alt="Creatie">
+                <h3>Creatie</h3>
+                <p>AI驱区动的UI和UX设计工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.kittl.com/?ref=ai-bot.cn" target="_blank">
+                <img src="images/Kittl.png" alt="Kittl">
+                <h3>Kittl</h3>
+                <p>AI驱区动的平面图形设计工具</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-category="chat">
+    <h2>AI对话聊天</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://chatgpt.com/" target="_blank">
+                <img src="images/ChatGPT.png" alt="ChatGPT">
+                <h3>ChatGPT</h3>
+                <p>OpenAl旗下AI对话工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://claude.ai/" target="_blank">
+                <img src="images/Claude.png" alt="Claude">
+                <h3>Claude</h3>
+                <p>ChatGPT的最为有力的竞争对手之一</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://copilot.microsoft.com/" target="_blank">
+                <img src="images/Copilot.png" alt="Copilot">
+                <h3>Copilot</h3>
+                <p>微软推出的网页版Copilot助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://x.ai/grok" target="_blank">
+                <img src="images/Grok.png" alt="Grok">
+                <h3>Grok</h3>
+                <p>马斯克旗下xAI推出的人工智能助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://deepmind.google/technologies/gemini/" target="_blank">
+                <img src="images/Gemini.png" alt="Gemini">
+                <h3>Gemini</h3>
+                <p>Google推出的AI聊天对话机器人Gemini</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://kimi.moonshot.cn/" target="_blank">
+                <img src="images/Kimi智能助手.png" alt="Kimi智能助手">
+                <h3>Kimi智能助手</h3>
+                <p>一次搜索可精读500个页面会推理解析，能深度思考的AI助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.doubao.com/" target="_blank">
+                <img src="images/豆包.png" alt="豆包">
+                <h3>豆包</h3>
+                <p>字节跳动推出的免费AI智能助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://chatglm.cn/main/alltoolsdetail?image=https://sfile.chatglm.cn/activeimg/bdms/66b97e348217030036f486f1&open_from=ads_web_aitool&fr=ads_web_aitool&lang=zh" target="_blank">
+                <img src="images/智谱清言.png" alt="智谱清言">
+                <h3>智谱清言</h3>
+                <p>免费全能的AI助手，支持AI绘画、视频生成</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://xinghuo.xfyun.cn/desk?ch=xhweb_fHH" target="_blank">
+                <img src="images/讯飞星火.png" alt="讯飞星火">
+                <h3>讯飞星火</h3>
+                <p>免费AI智能助手，性能媲美GPT-4</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://hailuoai.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/海螺AI.png" alt="海螺AI">
+                <h3>海螺AI</h3>
+                <p>MiniMax推出的免费AI智能聊天助理</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://yuanbao.tencent.com/chat/naQivTmsDa/13e4f12a-c1ab-11ef-9f69-3adaa5d45351" target="_blank">
+                <img src="images/腾讯元宝.png" alt="腾讯元宝">
+                <h3>腾讯元宝</h3>
+                <p>腾讯推出的免费AI智能助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://tongyi.aliyun.com/qianwen/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/通义千问.png" alt="通义千问">
+                <h3>通义千问</h3>
+                <p>阿里推出的自研大模型，通情、达义，你的全能AI助手!</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://yiyan.baidu.com/?utm_source=ai-bot.cn1" target="_blank">
+                <img src="images/文心一言.png" alt="文心一言">
+                <h3>文心一言</h3>
+                <p>百度推出的基于文心大模型的AI对话互动工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.tiangong.cn/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/天工AI.png" alt="天工AI">
+                <h3>天工AI</h3>
+                <p>昆仑万维推出的AI智能助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.seeles.ai/discover?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Koko AI.png" alt="Koko AI">
+                <h3>Koko AI</h3>
+                <p>Seele公司推出的「AI+3D」情感陪伴产品</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://tongyi.aliyun.com/xingchen/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/通义星尘.png" alt="通义星尘">
+                <h3>通义星尘</h3>
+                <p>用AI定制属于你自己的IP角色</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.ciciai.com/browser-extension/landing/zh/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Cici.png" alt="Cici">
+                <h3>Cici</h3>
+                <p>豆包国际版，字节跳动面向海外市场推出的AI助手</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-category="code">
+    <h2>AI编程工具</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://github.com/features/copilot" target="_blank">
+                <img src="images/GitHub Copilot.png" alt="GitHub Copilot">
+                <h3>GitHub Copilot</h3>
+                <p>GitHub推出的AI编程工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://docs.replit.com/replitai/agent" target="_blank">
+                <img src="images/Replit AgentAI.png" alt="Replit AgentAI">
+                <h3>Replit AgentAI</h3>
+                <p>AI初创公司Replit推出的AI编程丁具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://comate.baidu.com/zh?inviteCode=8f8or9cz" target="_blank">
+                <img src="images/文心快码.png" alt="文心快码">
+                <h3>文心快码</h3>
+                <p>百度推出的AI编程助手，基于文心大模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.marscode.cn/?utm_source=aibot.cn&utm_medium=xycpa&utm_campaign=" target="_blank">
+                <img src="images/豆包MarsCode.png" alt="豆包MarsCode">
+                <h3>豆包MarsCode</h3>
+                <p>字节推出的免费AI编程助手，基于豆包大模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://tongyi.aliyun.com/lingma?utm_content=m_1000399943" target="_blank">
+                <img src="images/通义灵码.png" alt="通义灵码">
+                <h3>通义灵码</h3>
+                <p>阿里推出的免费AI编程工具，基于通义大模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.huaweicloud.com/product/codeartside/snap.html" target="_blank">
+                <img src="images/CodeArts Snap.png" alt="CodeArts Snap">
+                <h3>CodeArts Snap</h3>
+                <p>华为云推出的智能编程助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://bigmodel.cn/login?utm_campaign=aibot&_channel_track_key=vqYFLTGW" target="_blank">
+                <img src="images/BigModel.png" alt="BigModel">
+                <h3>BigModel</h3>
+                <p>智谱推出的大模型开发平台，新用户免费领取2000万Tokens</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://codegeex.cn/zh-CN" target="_blank">
+                <img src="images/CodeGeeX.png" alt="CodeGeeX">
+                <h3>CodeGeeX</h3>
+                <p>智谱AI推出的免费AI编程助手</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-category="audio">
+    <h2>AI音频工具</h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <a href="https://www.moyin.com/" target="_blank">
+                <img src="images/魔音工坊.png" alt="魔音工坊">
+                <h3>魔音工坊</h3>
+                <p>AI配音工具，轻松配出美真人的声音</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.iflyrec.com/zhuanwenzi.html?from=ai-bot_zwz" target="_blank">
+                <img src="images/讯飞听见.png" alt="讯飞听见">
+                <h3>讯飞听见</h3>
+                <p>科大讯飞推出的在线A语音转文字工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://suno.com/?ref=ai-bot.cn" target="_blank">
+                <img src="images/Suno.png" alt="Suno">
+                <h3>Suno</h3>
+                <p>高质量的AI音乐创作平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.haimian.com/featured?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/海绵音乐.png" alt="海绵音乐">
+                <h3>海绵音乐</h3>
+                <p>字节跳动推出的免费AI音乐创作和发现平台</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.yinfeng.cn/home?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/音疯.png" alt="音疯">
+                <h3>音疯</h3>
+                <p>昆仑万维推出的AI音乐创作平台，一键生成原创歌曲</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://y.qq.com/tme_studio/index.html#/" target="_blank">
+                <img src="images/TME Studio.png" alt="TME Studio">
+                <h3>TME Studio</h3>
+                <p>腾讯音乐推出的智能音乐创作助手</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.stableaudio.com/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/Stable Audio.png" alt="Stable Audio">
+                <h3>Stable Audio</h3>
+                <p>Stability Al最新推出的音乐生成工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.uberduck.ai/?via=ai-bot" target="_blank">
+                <img src="images/Uberduck.png" alt="Uberduck">
+                <h3>Uberduck</h3>
+                <p>开源的AI语音生成社区，5000多种不同的声音</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=ZG9uYWxkY29vcGVyNjk1OA&ps_xid=fzLNgTD2NxNFjp&gsxid=fzLNgTD2NxNFjp&gspk=ZG9uYWxkY29vcGVyNjk1OA" target="_blank">
+                <img src="images/ElevenLabs.png" alt="ElevenLabs">
+                <h3>ElevenLabs</h3>
+                <p>AI文本转语音，支持包含中文在内的28种语言</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://peiyin.xunfei.cn/?utm_source=ai-bot.cn" target="_blank">
+                <img src="images/讯飞智作.png" alt="讯飞智作">
+                <h3>讯飞智作</h3>
+                <p>科大讯飞推出的AI转语音和配音工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://podcast.adobe.com/" target="_blank">
+                <img src="images/Adobe Podcast.png" alt="Adobe Podcast">
+                <h3>Adobe Podcast</h3>
+                <p>Adobe推出的在线AI音频录制和编辑工具</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://www.ibm.com/products/text-to-speech" target="_blank">
+                <img src="images/IBM Watson文字转语音.png" alt="IBM Watson文字转语音">
+                <h3>IBM Watson文字转语音</h3>
+                <p>IBM Watson文字转语音</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://fakeyou.com/" target="_blank">
+                <img src="images/FakeYou.png" alt="FakeYou">
+                <h3>FakeYou</h3>
+                <p>Deep Fake文本转语音</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://audiobox.metademolab.com/?ref=ai-bot.cn" target="_blank">
+                <img src="images/Audiobox.png" alt="Audiobox">
+                <h3>Audiobox</h3>
+                <p>Meta推出的免费开源的AI语音和声音生成模型</p>
+            </a>
+        </div>
+
+        <div class="tool-card">
+            <a href="https://ttsmaker.cn/?utm_source=ai-bot.cn" target="_blank">
+                <img src="TTSMaker" alt="TTSMaker">
+                <h3>TTSMaker</h3>
+                <p>马克配音(MakVoice)推出的免费AI文字转语音工具</p>
+            </a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+  <footer>
+    <p>&copy; 2024 TianLeung. 版权所有。</p>
+  </footer>
+  <section class="contact-section">
+    <h2>联系我</h2>
+    <div class="contact">
+        <p>扫描以下二维码添加我的各个平台！</p>
+        <div class="contact-grid">
+            <div>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAOUBQIFWZVsPdzoEFWDZpuNhWVm4XIz6C4KzBFe9qHNw" target="_blank">
+                    <img src="images/douyin-qr.png" alt="抖音二维码">
+                    <p class="label">抖音账号</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" target="_blank">
+                    <img src="images/add-friend-qr.png" alt="添加好友二维码">
+                    <p class="label">添加好友：TL65367</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" target="_blank">
+                    <img src="images/blog-qr.png" alt="博客二维码">
+                    <p class="label">博客二维码</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" target="_blank">
+                    <img src="images/video-qr.png" alt="视频号二维码">
+                    <p class="label">视频号二维码</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('.search-input');
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const sections = document.querySelectorAll('section');
+    
+    // 搜索功能
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        filterContent(searchTerm, getCurrentCategory());
+    });
+    
+    // 筛选功能
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // 更新按钮状态
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // 筛选内容
+            sections.forEach(section => {
+                if (section.classList.contains('contact-section')) return;
+                
+                if (category === 'all') {
+                    section.style.display = '';
+                } else {
+                    const sectionCategory = section.dataset.category;
+                    section.style.display = sectionCategory === category ? '' : 'none';
+                }
+            });
+            
+            // 同时应用搜索条件
+            filterContent(searchInput.value.toLowerCase(), category);
+        });
+    });
+    
+    function getCurrentCategory() {
+        return document.querySelector('.filter-button.active').dataset.category;
+    }
+    
+    function filterContent(searchTerm, category) {
+        sections.forEach(section => {
+            if (section.classList.contains('contact-section')) return;
+            
+            if (category !== 'all' && section.dataset.category !== category) {
+                section.style.display = 'none';
+                return;
+            }
+            
+            const cards = section.querySelectorAll('.tool-card');
+            let hasVisibleCards = false;
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const matchesSearch = !searchTerm || title.includes(searchTerm) || description.includes(searchTerm);
+                
+                card.style.display = matchesSearch ? '' : 'none';
+                if (matchesSearch) hasVisibleCards = true;
+            });
+            
+            section.style.display = hasVisibleCards ? '' : 'none';
+        });
+    }
+});
+</script>
+</body>
+</body>
+</html>
